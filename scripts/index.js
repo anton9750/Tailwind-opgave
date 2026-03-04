@@ -3,6 +3,7 @@ import { createHeader } from "./components/header.js";
 import { createHero } from "./components/hero.js";
 import { createProdukter } from "./components/produkter.js";
 import { createOmSection } from "./components/om.js";
+import { createOpskrifterSection } from "./components/opskrifter.js";
 import { createKontaktSection } from "./components/kontakt.js";
 import { createFooter } from "./components/footer.js";
 
@@ -22,6 +23,7 @@ if (!hjemmeside) {
   createHero(hjemmeside);
   createProdukter(hjemmeside, cartCount);
   createOmSection(hjemmeside);
+  createOpskrifterSection(hjemmeside);
   createKontaktSection(hjemmeside);
   createFooter(hjemmeside);
 }
