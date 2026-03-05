@@ -10,7 +10,7 @@ export function createOmSection(hjemmeside) {
 
   const omParagraph = document.createElement("p");
   omParagraph.textContent =
-    "KRYB arbejder for en mere bæredygtig fremtid gennem alternative proteinkilder. Insekter er klimavenlige, næringsrige og fremtidens fødevare.";
+    "lorem.";
   omParagraph.className = "text-gray-600 leading-relaxed";
 
   omText.appendChild(omTitle);
