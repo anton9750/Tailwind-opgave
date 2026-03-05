@@ -4,14 +4,22 @@ export function createHeader(hjemmeside) {
 
   // Top Bar
   const topBar = document.createElement("div");
-  topBar.className = "max-w-7xl mx-auto flex items-center justify-between px-6 py-4";
+  topBar.className =
+    "max-w-7xl mx-auto flex items-center justify-between px-6 py-4";
 
   // Navigation
   const nav = document.createElement("nav");
   nav.className = "hidden md:flex space-x-8 text-sm font-medium";
 
-  const links = ["FORSIDE","SHOP","FORHANDLERE","INSPIRATION","OM KRYB","KONTAKT"];
-  links.forEach(linkText => {
+  const links = [
+    "FORSIDE",
+    "SHOP",
+    "FORHANDLERE",
+    "INSPIRATION",
+    "OM KRYB",
+    "KONTAKT",
+  ];
+  links.forEach((linkText) => {
     const link = document.createElement("a");
     link.textContent = linkText;
     link.href = "#";
@@ -19,7 +27,27 @@ export function createHeader(hjemmeside) {
     nav.appendChild(link);
   });
 
+  const burger = document.createElement("button");
+burger.className = "md:hidden text-2xl";
+burger.textContent = "☰";
+
+topBar.appendChild(burger);
+
   topBar.appendChild(nav);
+
+  const mobileNav = document.createElement("nav");
+mobileNav.className =
+  "hidden flex-col space-y-4 px-6 pb-6 text-sm font-medium md:hidden bg-white";
+
+links.forEach((linkText) => {
+  const link = document.createElement("a");
+  link.textContent = linkText;
+  link.href = "#";
+  link.className = "block hover:text-gray-500 transition";
+  mobileNav.appendChild(link);
+});
+
+
 
   // Cart
   const cart = document.createElement("div");
@@ -38,7 +66,12 @@ export function createHeader(hjemmeside) {
   topBar.appendChild(cart);
 
   header.appendChild(topBar);
+  header.appendChild(mobileNav);
   hjemmeside.appendChild(header);
+
+  burger.addEventListener("click", () => {
+  mobileNav.classList.toggle("hidden");
+});
 
   return { cartCount };
 }

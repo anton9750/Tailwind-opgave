@@ -1,6 +1,7 @@
 export function createHero(hjemmeside) {
   const hero = document.createElement("section");
-  hero.className = "relative w-full h-screen flex items-center justify-center text-white";
+  hero.className =
+    "relative w-full h-screen flex items-center justify-center text-white";
 
   hero.style.backgroundImage = "url('images/tail.png'), url('images/hero.jpg')";
   hero.style.backgroundSize = "contain, cover";

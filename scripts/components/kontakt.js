@@ -20,16 +20,20 @@ export function createKontaktSection(hjemmeside) {
   form.className = "space-y-4";
 
   ["Navn", "Email", "Besked"].forEach((placeholder) => {
-    const input = document.createElement(placeholder === "Besked" ? "textarea" : "input");
+    const input = document.createElement(
+      placeholder === "Besked" ? "textarea" : "input",
+    );
     input.placeholder = placeholder;
-    input.className = "w-full border p-3 focus:outline-none focus:ring-2 focus:ring-black";
+    input.className =
+      "w-full border p-3 focus:outline-none focus:ring-2 focus:ring-black";
     form.appendChild(input);
   });
 
   const button = document.createElement("button");
   button.textContent = "SEND";
   button.type = "submit";
-  button.className = "bg-black text-white px-6 py-3 hover:bg-gray-800 transition";
+  button.className =
+    "bg-black text-white px-6 py-3 hover:bg-gray-800 transition";
 
   form.appendChild(button);
 
