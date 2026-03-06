@@ -37,7 +37,7 @@ export function createProdukter(hjemmeside, cartCount) {
     let cartItems = parseInt(cartCount.textContent.replace(/\D/g, ""));
     addToCartBtn.addEventListener("click", () => {
       cartItems++;
-      cartCount.textContent = `(${cartItems})`;
+     cartCount.textContent = "(" + cartItems + ")";
     });
 
     card.appendChild(image);

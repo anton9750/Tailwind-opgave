@@ -20,11 +20,6 @@ if (!hjemmeside) {
 
 
   const { cartCount } = createHeader(hjemmeside);
-
-
-
-
-  
   createHero(hjemmeside);
   createProdukter(hjemmeside, cartCount);
   createOmSection(hjemmeside);

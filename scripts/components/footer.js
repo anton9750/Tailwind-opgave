@@ -3,11 +3,11 @@ export function createFooter(hjemmeside) {
   footer.className = "bg-yellow-100 text-yellow-900 pt-16 pb-12 mt-20";
 
   const container = document.createElement("div");
-  container.className = "max-w-6xl mx-auto px-10";
+  container.className = "max-w-6xl mx-auto px-6 sm:px-10";
 
   // Social icons row
   const socialRow = document.createElement("div");
-  socialRow.className = "flex justify-center gap-16 -mt-16";
+  socialRow.className = "flex justify-center gap-10 sm:gap-16 -mt-16 flex-wrap";
 
   const socials = [
     "../../images/svg/Sm-Linkedin.svg",
@@ -16,40 +16,40 @@ export function createFooter(hjemmeside) {
     "../../images/svg/Sm-Youtube.svg"
   ];
 
-  socials.forEach(src => {
+  socials.forEach((src) => {
     const img = document.createElement("img");
     img.src = src;
     img.alt = "social icon";
-    img.style.width = "50px"; // inline sizing
-    img.style.height = "50px"; // inline sizing
-    img.style.cursor = "pointer";
+    img.classList = "w-[30px] h-[30px]"
     socialRow.appendChild(img);
   });
 
   // Logo
   const logoWrap = document.createElement("div");
-  logoWrap.className = "flex justify-center mb-14";
+  logoWrap.classList = "flex justify-center my-10";
 
   const logo = document.createElement("img");
   logo.src = "../../images/svg/Kryb-Logo-Black.svg";
   logo.alt = "KRYB";
-  logo.style.width = "80px"; // inline sizing
-  logo.style.height = "30px"; // inline sizing
+  logo.classList = "w-[30px] h-[30px]"
+
   logoWrap.appendChild(logo);
 
-  // Footer links grid
+
   const grid = document.createElement("div");
-  grid.className = "flex justify-center items-start gap-16 text-sm";
+  grid.className =
+    "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-xs sm:text-sm text-center md:text-left";
 
   function column(title, items) {
     const div = document.createElement("div");
 
     const h = document.createElement("h4");
     h.textContent = title;
-    h.className = "font-semibold mb-3 uppercase tracking-wide text-yellow-900";
+    h.className =
+      "font-semibold mb-3 uppercase tracking-wide text-yellow-900";
     div.appendChild(h);
 
-    items.forEach(text => {
+    items.forEach((text) => {
       if (text === "") {
         const spacer = document.createElement("div");
         spacer.className = "h-4";
@@ -59,7 +59,8 @@ export function createFooter(hjemmeside) {
 
       const p = document.createElement("p");
       p.textContent = text;
-      p.className = "text-yellow-900 hover:text-yellow-800 cursor-pointer leading-7";
+      p.className =
+        "text-yellow-900 hover:text-yellow-800 cursor-pointer leading-6";
       div.appendChild(p);
     });
 
