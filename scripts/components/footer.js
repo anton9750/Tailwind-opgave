@@ -12,7 +12,7 @@ export function createFooter(hjemmeside) {
   const socials = [
     "../../images/svg/Sm-Linkedin.svg",
     "../../images/svg/Sm-Facebook.svg",
-    "../../images/svg/Sm-Facebook.svg",
+    "../../images/svg/Sm-istagram.svg",
     "../../images/svg/Sm-Youtube.svg"
   ];
 
