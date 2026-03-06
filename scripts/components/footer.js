@@ -5,7 +5,7 @@ export function createFooter(hjemmeside) {
   const container = document.createElement("div");
   container.className = "max-w-6xl mx-auto px-6 sm:px-10";
 
-  // Social icons row
+
   const socialRow = document.createElement("div");
   socialRow.className = "flex justify-center gap-10 sm:gap-16 -mt-16 flex-wrap";
 
@@ -24,7 +24,7 @@ export function createFooter(hjemmeside) {
     socialRow.appendChild(img);
   });
 
-  // Logo
+
   const logoWrap = document.createElement("div");
   logoWrap.classList = "flex justify-center my-10";
 
